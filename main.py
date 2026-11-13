@@ -13,10 +13,11 @@ JOKE = "My AI agent fixed the bug by deleting the test, then looked at the faili
 OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
 
-def _entry() -> None:
+def main() -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(os.path.join(OUTPUT_DIR, "entry.txt"), "w", encoding="utf-8") as f:
         f.write(JOKE)
 
 
-_entry()
+if __name__ == "__main__":
+    main()
